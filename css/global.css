@@ -1,0 +1,58 @@
+body {
+  font-family: "Fira Sans", Arial, Helvetica, sans-serif;
+  margin: 0px;
+  color: #141414;
+}
+h1,
+h2,
+h3,
+p {
+  margin: 0px;
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+#imagem {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s;
+}
+
+/* Animação de flutuação */
+@keyframes flutuar {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  } /* Sobe um pouco */
+  100% {
+    transform: translateY(0);
+  } /* Volta à posição original */
+}
+
+/* Classe para ativar a animação */
+.flutuando {
+  animation: flutuar 2.5s infinite ease-in-out;
+}
+
+.subtitulo {
+  font-size: 8rem;
+  line-height: 1;
+  text-transform: uppercase;
+  word-break: break-all;
+  max-width: 4ch;
+}
+
+@media (max-width: 800px) {
+  .subtitulo {
+    font-size: 3rem;
+    text-transform: capitalize;
+    max-width: initial !important;
+  }
+}
